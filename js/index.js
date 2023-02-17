@@ -9,17 +9,26 @@ document.getElementById('btn-triangle').addEventListener('click', function () {
 
     dataUpdate(headerName,triangleArea);
 
-})
+});
+document.getElementById('btn-rectangle').addEventListener('click', function () {
+    const headerName = document.getElementById('rectangle').innerText;
+    const baseRectangle = document.getElementById('base-rectangle').value;
+    const heightRectangle = document.getElementById('height-rectangle').value;
+    const rectangleArea = parseFloat(baseRectangle) * parseFloat(heightRectangle) ;
+
+    dataUpdate(headerName,rectangleArea);
+
+});
 
 
-function dataUpdate(headerName,triangleArea,) {
+function dataUpdate(headerName,totalArea,) {
     const container = document.getElementById('result-container');
     count++;
     const tr = document.createElement('tr');
     tr.innerHTML = `
     <td>${count}</td>
     <td>${headerName}</td>
-    <td>${triangleArea}</td>
+    <td>${totalArea}</td>
     `;
     container.appendChild(tr);
 }
