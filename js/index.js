@@ -12,6 +12,7 @@ document.getElementById('btn-triangle').addEventListener('click', function () {
     dataUpdate(headerName,triangleArea);
 
 });
+
 document.getElementById('btn-rectangle').addEventListener('click', function () {
     const headerName = document.getElementById('rectangle').innerText;
     const baseRectangle = document.getElementById('base-rectangle').value;
@@ -21,6 +22,7 @@ document.getElementById('btn-rectangle').addEventListener('click', function () {
     dataUpdate(headerName,rectangleArea);
 
 });
+
 document.getElementById('btn-parallelogram').addEventListener('click', function () {
     const headerName = document.getElementById('parallelogram').innerText;
     const baseParallelogram = document.getElementById('base-parallelogram').innerText;
@@ -28,6 +30,16 @@ document.getElementById('btn-parallelogram').addEventListener('click', function 
     const parallelogramArea = parseFloat(baseParallelogram) * parseFloat(heightParallelogram) ;
 
     dataUpdate(headerName,parallelogramArea);
+
+});
+
+document.getElementById('btn-rhombus').addEventListener('click', function () {
+    const headerName = document.getElementById('rhombus').innerText;
+    const baseRhombus = document.getElementById('base-rhombus').innerText;
+    const heightRhombus = document.getElementById('height-rhombus').innerText;
+    const rhombusArea = 0.5 *  parseFloat(baseRhombus) * parseFloat(heightRhombus) ;
+
+    dataUpdate(headerName,rhombusArea);
 
 });
 

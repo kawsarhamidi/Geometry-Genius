@@ -29,7 +29,7 @@
           <input class="input input-bordered" type="text">
         </div> -->
     <main>
-        <div class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
+        <div class="lg:px-12 flex flex-cols md:flex-row lg:flex-row">
             <div class="products-cetails w-full md:-[75%] lg-[75%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="card w-96 bg-base-100 shadow-xl ">
                     <figure class="px-10 pt-10">
@@ -76,12 +76,30 @@
                       <p>Area (A) = b * h</p>
                       <div class="flex justify-center items-center gap-3 mb-8">
                         
-                        <h1 class="text-xl">b=<span id="base-parallelogram">10</span>cm,</h1>
-                        <h1 class="text-xl">h=<span id="height-parallelogram">10</span>cm</h1>
+                        <h1 class="text-xl">b = <span id="base-parallelogram">10</span>cm,</h1>
+                        <h1 class="text-xl">h = <span id="height-parallelogram">10</span>cm</h1>
     
                       </div>
                       <div class="card-actions">
                         <button id="btn-parallelogram" class="btn btn-wide">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-96 bg-base-100 shadow-xl ">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/rhombus.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="rhombus" class="card-title">Rhombus</h2>
+                      <p>Area (A) = 0.5 * d1 * d2</p>
+                      <div class="flex justify-center items-center gap-3 mb-8">
+                        
+                        <h1 class="text-xl">d1 = <span id="base-rhombus">16</span>cm</h1>
+                        <h1 class="text-xl">d2 = <span id="height-rhombus">8</span>cm</h1>
+    
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-rhombus" class="btn btn-wide">Calculate</button>
                       </div>
                     </div>
                   </div>
