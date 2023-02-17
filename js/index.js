@@ -53,6 +53,16 @@ document.getElementById('btn-pentagon').addEventListener('click', function () {
 
 });
 
+document.getElementById('btn-ellipse').addEventListener('click', function () {
+    const headerName = document.getElementById('ellipse').innerText;
+    const baseEllipse = document.getElementById('divide-ellipse').innerText;
+    const heightEllipse = document.getElementById('height-ellipse').innerText;
+    const ellipseArea = (3.14 *  parseFloat(baseEllipse) * parseFloat(heightEllipse)).toFixed(2) ;
+
+    dataUpdate(headerName,ellipseArea);
+
+});
+
 
 
 function dataUpdate(headerName,totalArea,) {
