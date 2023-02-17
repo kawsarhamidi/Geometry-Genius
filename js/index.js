@@ -1,6 +1,8 @@
 
 let count = 0;
 
+
+
 document.getElementById('btn-triangle').addEventListener('click', function () {
     const headerName = document.getElementById('triangle').innerText;
     const baseTriangle = document.getElementById('base-triangle').value;
@@ -19,6 +21,16 @@ document.getElementById('btn-rectangle').addEventListener('click', function () {
     dataUpdate(headerName,rectangleArea);
 
 });
+document.getElementById('btn-parallelogram').addEventListener('click', function () {
+    const headerName = document.getElementById('parallelogram').innerText;
+    const baseParallelogram = document.getElementById('base-parallelogram').innerText;
+    const heightParallelogram = document.getElementById('height-parallelogram').innerText;
+    const parallelogramArea = parseFloat(baseParallelogram) * parseFloat(heightParallelogram) ;
+
+    dataUpdate(headerName,parallelogramArea);
+
+});
+
 
 
 function dataUpdate(headerName,totalArea,) {
