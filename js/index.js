@@ -35,11 +35,21 @@ document.getElementById('btn-parallelogram').addEventListener('click', function 
 
 document.getElementById('btn-rhombus').addEventListener('click', function () {
     const headerName = document.getElementById('rhombus').innerText;
-    const baseRhombus = document.getElementById('base-rhombus').innerText;
+    const baseRhombus = document.getElementById('divide-rhombus').innerText;
     const heightRhombus = document.getElementById('height-rhombus').innerText;
     const rhombusArea = 0.5 *  parseFloat(baseRhombus) * parseFloat(heightRhombus) ;
 
     dataUpdate(headerName,rhombusArea);
+
+});
+
+document.getElementById('btn-pentagon').addEventListener('click', function () {
+    const headerName = document.getElementById('pentagon').innerText;
+    const basePentagon = document.getElementById('divide-pentagon').innerText;
+    const heightPentagon = document.getElementById('height-pentagon').innerText;
+    const pentagonArea = 0.5 *  parseFloat(basePentagon) * parseFloat(heightPentagon) ;
+
+    dataUpdate(headerName,pentagonArea);
 
 });
 
