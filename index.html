@@ -12,7 +12,10 @@
     <header>
         <div class="navbar bg-base-100">
             <div class="navbar-start">
-              <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+              <div class="">
+                <h1 class="normal-case text-xl font-bold">Interactive</h1>
+              <h4 class="">Geometry Genius</h4>
+              </div>
             </div>
             
             <div class="navbar-end">
@@ -21,8 +24,44 @@
             </div>
           </div>
     </header>
+    <!-- <div class="flex justify-center items-center gap-3">
+          <h1>test</h1>
+          <input class="input input-bordered" type="text">
+        </div> -->
     <main>
-        
+        <div class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
+            <div class="products-cetails w-full md:-[75%] lg-[75%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card w-96 bg-base-100 shadow-xl ">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/triangle.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="triangle" class="card-title">Triangle</h2>
+                      <p>Area (A) = 0.5 * b * h</p>
+                      <div class="flex justify-center items-center gap-3 mb-8">
+                        <input id="base-triangle" type="text" placeholder="b" class="input input-bordered input-sm w-full max-w-xs" />
+                        <h1>cm</h1>
+                        <input id="height-triangle" type="text" placeholder="h" class="input input-bordered input-sm w-full max-w-xs" />
+                        <h1>cm</h1>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-triangle" class="btn btn-wide">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                
+            </div>
+            <div class="cart-details w-full md:w-[25%] lg:w-[25%] mx-auto">
+                <h1 class="text-3xl text-center font-bold underline mt-5">Area Calculation <span id="total-result"></span></h1>
+                  <div class="overflow-x-auto">
+                    <table class="table w-full">
+                      <tbody id="result-container">
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </div>
     </main>
+    <script src="./js/index.js"></script>
 </body>
 </html>
