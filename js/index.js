@@ -1,7 +1,7 @@
-
+//count + 1
 let count = 0;
 
-
+//triangle
 document.getElementById('btn-triangle').addEventListener('click', function () {
     const headerName = document.getElementById('triangle').innerText;
     const baseTriangle = document.getElementById('base-triangle').value;
@@ -12,7 +12,7 @@ document.getElementById('btn-triangle').addEventListener('click', function () {
     const triangleArea = 1/2 * parseFloat(baseTriangle) * parseFloat(heightTriangle) ;
     dataUpdate(headerName,triangleArea);
 });
-
+//rectangle
 document.getElementById('btn-rectangle').addEventListener('click', function () {
     const headerName = document.getElementById('rectangle').innerText;
     const baseRectangle = document.getElementById('base-rectangle').value;
@@ -21,11 +21,10 @@ document.getElementById('btn-rectangle').addEventListener('click', function () {
     errorStringEmpty(baseRectangle,heightRectangle);
 
     const rectangleArea = parseFloat(baseRectangle) * parseFloat(heightRectangle) ;
-    // document.getElementById("expense").innerText = rectangleArea;
     dataUpdate(headerName,rectangleArea);
     setBg();
 });
-
+//parallelogram
 document.getElementById('btn-parallelogram').addEventListener('click', function () {
     const headerName = document.getElementById('parallelogram').innerText;
     const baseParallelogram = document.getElementById('base-parallelogram').innerText;
@@ -35,7 +34,7 @@ document.getElementById('btn-parallelogram').addEventListener('click', function 
     dataUpdate(headerName,parallelogramArea);
 
 });
-
+//rhombus
 document.getElementById('btn-rhombus').addEventListener('click', function () {
     const headerName = document.getElementById('rhombus').innerText;
     const baseRhombus = document.getElementById('divide-rhombus').innerText;
@@ -45,7 +44,7 @@ document.getElementById('btn-rhombus').addEventListener('click', function () {
     dataUpdate(headerName,rhombusArea);
 
 });
-
+//pentagon
 document.getElementById('btn-pentagon').addEventListener('click', function () {
     const headerName = document.getElementById('pentagon').innerText;
     const basePentagon = document.getElementById('divide-pentagon').innerText;
@@ -55,7 +54,7 @@ document.getElementById('btn-pentagon').addEventListener('click', function () {
     dataUpdate(headerName,pentagonArea);
 
 });
-
+//ellipse
 document.getElementById('btn-ellipse').addEventListener('click', function () {
     const headerName = document.getElementById('ellipse').innerText;
     const baseEllipse = document.getElementById('divide-ellipse').innerText;
@@ -107,14 +106,12 @@ function setBg() {
   }
   color.addEventListener("mouseover", setBg);
  
-
 function set2Bg() {
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
     document.getElementById('color1').style.backgroundColor = "#" + randomColor; 
   }
   color1.addEventListener("mouseover", set2Bg);
  
-
 function set3Bg() {
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
     document.getElementById('color2').style.backgroundColor = "#" + randomColor; 
@@ -127,13 +124,11 @@ function set4Bg() {
   }
   color3.addEventListener("mouseover", set4Bg);
  
-
 function set5Bg() {
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
     document.getElementById('color4').style.backgroundColor = "#" + randomColor; 
   }
   color4.addEventListener("mouseover", set5Bg);
- 
 
 function set6Bg() {
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
@@ -141,5 +136,3 @@ function set6Bg() {
   }
   color5.addEventListener("mouseover", set6Bg);
  
-  
-
