@@ -73,6 +73,33 @@ function dataUpdate(headerName,totalArea,) {
     <td>${count}</td>
     <td>${headerName}</td>
     <td>${totalArea}</td>
+    <td>${convertCM()}</td>
     `;
     container.appendChild(tr);
 }
+
+function convertCM() {
+    const convertToCm = 'Convert To m^2';
+    return convertToCm;
+}
+
+
+// if (isNaN(income) || isNaN(food) || isNaN(rent) || isNaN(others)){
+//     const warning = alert('please input number type value');
+//     return warning;
+// }else if (income <= 0 || food <= 0 || rent <= 0 || others <= 0) {
+//     const warning = alert('please input positive number');
+//     return warning;
+// }
+
+// if (isNaN(savingInput)) {
+//     const warning = alert('please input number type value');
+//     return warning;       
+// }else if (savingInput <= 0 ) {
+//     const warning = alert('please input positive number');
+//     return warning;
+// }
+
+// if(productsPrice === '' || productsPrice <= 0 || ProductQuantity === '' || ProductQuantity <= 0 || productsPrice <= ProductQuantity){
+//     return alert("Please Provide Valid Number");
+//   }
