@@ -77,14 +77,14 @@ function dataUpdate(headerName,totalArea,) {
     tr.innerHTML = `
     <td>${count}</td>
     <td>${headerName}</td>
-    <td>${totalArea} cm^2</td>
+    <td>${totalArea} cm<sup>2</sup></td>
     <button class='btn btn-sm normal-case mt-3 bg-sky-100'>${convertCM()}</button>
     `;
     container.appendChild(tr);
 }
  //convert to meter
 function convertCM() {
-    const convertToCm = 'Convert To m^2';
+    const convertToCm = 'Convert To m<sup>2</sup>';
     return convertToCm;
 }
 //alert
@@ -101,8 +101,5 @@ function errorStringEmpty(integer1,integer2){
 
 //
 
-document.getElementById('my-color').addEventListener('input', function (event) {
-    const textarea = document.getElementById('text-box');
-    textarea.style.color = event.target.value;
-});
+
 
