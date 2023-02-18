@@ -10,7 +10,6 @@ document.getElementById('btn-triangle').addEventListener('click', function () {
     errorStringEmpty(baseTriangle,heightTriangle);
 
     const triangleArea = 1/2 * parseFloat(baseTriangle) * parseFloat(heightTriangle) ;
-
     dataUpdate(headerName,triangleArea);
     
    
@@ -24,7 +23,7 @@ document.getElementById('btn-rectangle').addEventListener('click', function () {
     errorStringEmpty(baseRectangle,heightRectangle);
 
     const rectangleArea = parseFloat(baseRectangle) * parseFloat(heightRectangle) ;
-
+    // document.getElementById("expense").innerText = rectangleArea;
     dataUpdate(headerName,rectangleArea);
     
 });
@@ -78,8 +77,8 @@ function dataUpdate(headerName,totalArea,) {
     tr.innerHTML = `
     <td>${count}</td>
     <td>${headerName}</td>
-    <td>${totalArea}</td>
-    <td>${convertCM()}</td>
+    <td>${totalArea} cm^2</td>
+    <button class='btn btn-sm normal-case mt-3 bg-sky-100'>${convertCM()}</button>
     `;
     container.appendChild(tr);
 }
@@ -100,4 +99,10 @@ function errorStringEmpty(integer1,integer2){
       }
 }
 
+//
+
+document.getElementById('my-color').addEventListener('input', function (event) {
+    const textarea = document.getElementById('text-box');
+    textarea.style.color = event.target.value;
+});
 
