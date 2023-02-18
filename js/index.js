@@ -75,7 +75,7 @@ function dataUpdate(headerName,totalArea,) {
     <td>${count}</td>
     <td>${headerName}</td>
     <td>${totalArea} cm<sup>2</sup></td>
-    <button class='btn btn-sm normal-case mt-3 bg-sky-100'>${convertCM()}</button>
+    <td><button class='btn btn-sm normal-case bg-sky-100'>${convertCM()}</button></td>
     `;
     container.appendChild(tr);
 }
