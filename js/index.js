@@ -11,7 +11,7 @@ document.getElementById('btn-triangle').addEventListener('click', function () {
 
     const triangleArea = 1/2 * parseFloat(baseTriangle) * parseFloat(heightTriangle) ;
     dataUpdate(headerName,triangleArea);
-    
+    setBg();
    
 });
 
@@ -94,12 +94,19 @@ function errorStringEmpty(integer1,integer2){
         return alert("Please Provide Valid Number");
       }
       else if (isNaN(integer1) || isNaN(integer2)){
-        const warning = alert('please input number type value');
-        return warning;
+         
+        return alert('please input number type value');
       }
 }
 
 //
 
-
+const setBg = () => {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.getElementById('color').style.backgroundColor = "#" +  randomColor.innerHTML;
+    // color.innerHTML = "#" + randomColor;
+  }
+  
+  genNew.addEventListener("mouseover", setBg);
+  setBg();
 
