@@ -2,25 +2,31 @@
 let count = 0;
 
 
-
 document.getElementById('btn-triangle').addEventListener('click', function () {
     const headerName = document.getElementById('triangle').innerText;
     const baseTriangle = document.getElementById('base-triangle').value;
     const heightTriangle = document.getElementById('height-triangle').value;
+
+    errorStringEmpty(baseTriangle,heightTriangle);
+
     const triangleArea = 1/2 * parseFloat(baseTriangle) * parseFloat(heightTriangle) ;
 
     dataUpdate(headerName,triangleArea);
-
+    
+   
 });
 
 document.getElementById('btn-rectangle').addEventListener('click', function () {
     const headerName = document.getElementById('rectangle').innerText;
     const baseRectangle = document.getElementById('base-rectangle').value;
     const heightRectangle = document.getElementById('height-rectangle').value;
+
+    errorStringEmpty(baseRectangle,heightRectangle);
+
     const rectangleArea = parseFloat(baseRectangle) * parseFloat(heightRectangle) ;
 
     dataUpdate(headerName,rectangleArea);
-
+    
 });
 
 document.getElementById('btn-parallelogram').addEventListener('click', function () {
@@ -63,7 +69,7 @@ document.getElementById('btn-ellipse').addEventListener('click', function () {
 
 });
 
-
+//result table
 
 function dataUpdate(headerName,totalArea,) {
     const container = document.getElementById('result-container');
@@ -77,29 +83,21 @@ function dataUpdate(headerName,totalArea,) {
     `;
     container.appendChild(tr);
 }
-
+ //convert to meter
 function convertCM() {
     const convertToCm = 'Convert To m^2';
     return convertToCm;
 }
+//alert
+
+function errorStringEmpty(integer1,integer2){
+    if(integer1 === '' || integer1 <= 0 || integer2 === '' || integer2 <= 0){
+        return alert("Please Provide Valid Number");
+      }
+      else if (isNaN(integer1) || isNaN(integer2)){
+        const warning = alert('please input number type value');
+        return warning;
+      }
+}
 
 
-// if (isNaN(income) || isNaN(food) || isNaN(rent) || isNaN(others)){
-//     const warning = alert('please input number type value');
-//     return warning;
-// }else if (income <= 0 || food <= 0 || rent <= 0 || others <= 0) {
-//     const warning = alert('please input positive number');
-//     return warning;
-// }
-
-// if (isNaN(savingInput)) {
-//     const warning = alert('please input number type value');
-//     return warning;       
-// }else if (savingInput <= 0 ) {
-//     const warning = alert('please input positive number');
-//     return warning;
-// }
-
-// if(productsPrice === '' || productsPrice <= 0 || ProductQuantity === '' || ProductQuantity <= 0 || productsPrice <= ProductQuantity){
-//     return alert("Please Provide Valid Number");
-//   }
