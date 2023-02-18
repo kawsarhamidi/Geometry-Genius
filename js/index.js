@@ -11,8 +11,6 @@ document.getElementById('btn-triangle').addEventListener('click', function () {
 
     const triangleArea = 1/2 * parseFloat(baseTriangle) * parseFloat(heightTriangle) ;
     dataUpdate(headerName,triangleArea);
-    setBg();
-   
 });
 
 document.getElementById('btn-rectangle').addEventListener('click', function () {
@@ -25,7 +23,7 @@ document.getElementById('btn-rectangle').addEventListener('click', function () {
     const rectangleArea = parseFloat(baseRectangle) * parseFloat(heightRectangle) ;
     // document.getElementById("expense").innerText = rectangleArea;
     dataUpdate(headerName,rectangleArea);
-    
+    setBg();
 });
 
 document.getElementById('btn-parallelogram').addEventListener('click', function () {
@@ -91,22 +89,57 @@ function convertCM() {
 
 function errorStringEmpty(integer1,integer2){
     if(integer1 === '' || integer1 <= 0 || integer2 === '' || integer2 <= 0){
-        return alert("Please Provide Valid Number");
+        const validNumber =  alert("Please Provide Valid Number");
+        return validNumber;
       }
       else if (isNaN(integer1) || isNaN(integer2)){
          
-        return alert('please input number type value');
+        const inputWrong = alert('please input number type value');
+        return inputWrong;
       }
 }
 
-//
+//backgroundColor change not complete 
 
-const setBg = () => {
+function setBg() {
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    document.getElementById('color').style.backgroundColor = "#" +  randomColor.innerHTML;
-    // color.innerHTML = "#" + randomColor;
+    document.getElementById('color').style.backgroundColor = "#" + randomColor; 
   }
+  color.addEventListener("mouseover", setBg);
+ 
+
+function set2Bg() {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.getElementById('color1').style.backgroundColor = "#" + randomColor; 
+  }
+  color1.addEventListener("mouseover", set2Bg);
+ 
+
+function set3Bg() {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.getElementById('color2').style.backgroundColor = "#" + randomColor; 
+  }
+  color2.addEventListener("mouseover", set3Bg);
+
+function set4Bg() {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.getElementById('color3').style.backgroundColor = "#" + randomColor; 
+  }
+  color3.addEventListener("mouseover", set4Bg);
+ 
+
+function set5Bg() {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.getElementById('color4').style.backgroundColor = "#" + randomColor; 
+  }
+  color4.addEventListener("mouseover", set5Bg);
+ 
+
+function set6Bg() {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.getElementById('color5').style.backgroundColor = "#" + randomColor; 
+  }
+  color5.addEventListener("mouseover", set6Bg);
+ 
   
-  genNew.addEventListener("mouseover", setBg);
-  setBg();
 
